@@ -1945,36 +1945,36 @@ footer .brand-name b {
 /* Fix mobile header overflow */
 @media (max-width: 620px) {
 
-    .nav-wrap {
+.nav-wrap {
         gap: 6px;
     }
 
-    .brand {
+.brand {
         gap: 6px;
         min-width: 0;
     }
 
-    .navbar-logo {
+.navbar-logo {
         width: 40px;
         height: 40px;
         flex-shrink: 0;
     }
 
-    .brand-name {
+.brand-name {
         font-size: 10px;
         white-space: nowrap;
     }
 
-    .brand-name small {
+.brand-name small {
         display: none;
     }
 
-    .menu-toggle {
+.menu-toggle {
         padding: 7px;
         flex-shrink: 0;
     }
 
-    .call-button {
+.call-button {
         margin-left: 0;
         padding: 8px 9px;
         font-size: 9px;
