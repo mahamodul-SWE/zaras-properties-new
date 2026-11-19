@@ -63,26 +63,78 @@
 
 <main id="main">
 
-<section class="page-hero compact-hero" style="--page-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85')"><div class="container"><p class="eyebrow light">CONTACT US</p><h1>We’re here<br><em>to help.</em></h1><p>Whether you are looking for a home or have a property to sell, start a conversation with our team.</p></div></section>
+
+<!--Hero section-->
+
+
+<section class="page-hero compact-hero" style="--page-image: url('../images/about-page-hero.avif');">
+
+  <div class="container">
+    <p class="eyebrow light">CONTACT US</p>
+    <h1>We’re here<br><em>to help.</em></h1>
+    <p>Whether you are looking for a home or have a property to sell, start a conversation with our team.</p>
+  </div>
+
+</section>
+
+
+<!--Contact and form Info section-->
 
 
 <section class="section-pad">
 
 <div class="container contact-layout">
 
-<!--Contact Info section-->
+
 
 <div class="contact-details">
 
-	<p class="eyebrow">GET IN TOUCH</p><h2>Let’s talk <em>property.</em></h2><a class="contact-method" href="tel:07738940597"><span>☎</span><div><small>CALL OUR TEAM</small><strong>07738 940597</strong></div></a><a class="contact-method" href="mailto:info@zarasproperties.com"><span>✉</span><div><small>EMAIL US</small><strong>info@zarasproperties.com</strong></div></a><div class="contact-method"><span>⌖</span><div><small>OUR ADDRESS</small><strong>Hatch Gate Inn, The Hatch,<br>Burghfield, Reading, Berkshire,<br>RG30 3TH, United Kingdom</strong></div></div><div class="aside-note"><strong>A quick note about our business</strong><p>We are a residential property investor, not a letting agency. We only let and manage properties that we own.</p></div>
+	<p class="eyebrow">GET IN TOUCH</p>
+	
+	<h2>Let’s talk <em>property.</em></h2>
+	
+	<a class="contact-method" href="tel:07738940597"><span>☎</span><div><small>CALL OUR TEAM</small><strong>07738 940597</strong></div></a>
+	
+	<a class="contact-method" href="mailto:info@zarasproperties.com"><span>✉</span><div><small>EMAIL US</small><strong>info@zarasproperties.com</strong></div></a>
+	
+	<div class="contact-method"><span>⌖</span><div><small>OUR ADDRESS</small><strong>Hatch Gate Inn, The Hatch,<br>Burghfield, Reading, Berkshire,<br>RG30 3TH, United Kingdom</strong></div></div>
+	
+	<div class="aside-note"><strong>A quick note about our business</strong><p>We are a residential property investor, not a letting agency. We only let and manage properties that we own.</p></div>
 
 </div>
 
 <!--Contact form section-->
 
+
 <form class="contact-form" action="send-mail.php" method="post">
 
-	<input type="hidden" name="form_type" value="general"><p class="eyebrow">SEND AN ENQUIRY</p><h2>How can we <em>help?</em></h2><div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="150"></label></div><div class="form-row"><label>Telephone (optional)<input name="phone" autocomplete="tel" maxlength="40"></label><label>Subject<select name="subject" id="contact-subject" required><option value="">Choose a subject</option><option>Rental enquiry</option><option>Property sale / acquisition</option><option>Corporate social responsibility</option><option>General enquiry</option><option value="Other">Others</option></select></label></div><label class="other-subject" hidden>Write your subject<input name="other_subject" maxlength="120"></label><label>Your message<textarea name="message" rows="6" required maxlength="4000"></textarea></label><label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Zaras Properties may contact me about this enquiry.</span></label><div class="form-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="button button-green" type="submit">Send Enquiry <span>↗</span></button><p class="form-privacy">Your message will be sent directly to info@zarasproperties.com. No website database is used.</p>
+	<input type="hidden" name="form_type" value="general">
+	<p class="eyebrow">SEND AN ENQUIRY</p>
+	<h2>How can we <em>help?</em></h2>
+	
+	<div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="150"></label></div>
+	
+	<div class="form-row">
+	
+	<label>Telephone (optional)<input name="phone" autocomplete="tel" maxlength="40"></label>
+	
+	<label>Subject<select name="subject" id="contact-subject" required><option value="">Choose a subject</option><option>Rental enquiry</option><option>Property sale / acquisition</option><option>Corporate social responsibility</option><option>General enquiry</option><option value="Other">Others</option></select>
+	
+	</label>
+	
+	</div>
+	
+	<label class="other-subject" hidden>Write your subject<input name="other_subject" maxlength="120"></label>
+	
+	<label>Your message<textarea name="message" rows="6" required maxlength="4000"></textarea></label>
+	
+	<label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Zaras Properties may contact me about this enquiry.</span></label>
+	
+	<div class="form-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+	
+	<button class="button button-green" type="submit">Send Enquiry <span>↗</span></button>
+	
+	<p class="form-privacy">Your message will be sent directly to info@zarasproperties.com. No website database is used.</p>
 
 </form>
 
