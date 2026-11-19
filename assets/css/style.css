@@ -1893,3 +1893,30 @@ footer .brand-name b {
         z-index: 1002;
     }
 }
+
+
+/* Hero Section*/
+
+
+/* Mobile Hero Button Visibility Fix */
+
+@media (max-width: 620px) {
+    .hero {
+        height: auto;
+        min-height: calc(100svh - 76px);
+        max-height: none;
+        padding: 35px 0 45px;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .hero .button-row {
+        gap: 12px;
+    }
+}
+
+
