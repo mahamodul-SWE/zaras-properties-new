@@ -66,6 +66,8 @@
 
 <main id="main">
 
+
+<!-- Hero Section  -->
     <section
         class="page-hero"
         style="--page-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85')"
@@ -83,174 +85,195 @@
             </p>
         </div>
     </section>
-
+	
+	
+	
+	<!-- Gallery Section: Featured Properties + Property Categories -->
     <section class="section-pad properties-showcase">
-
         <div class="container">
-
+            <!-- Featured Properties -->
             <div class="properties-intro">
-
-                <span class="region-label">
-                    SOUTH EAST &amp; SOUTH WEST ENGLAND
-                </span>
-
-                <h2>Renovated Residential Portfolio</h2>
-
-                <p>
-                    Every residence in our portfolio is carefully selected and improved for modern British living and thermal efficiency standards.
-                </p>
-
+                <span class="region-label">SOUTH EAST &amp; SOUTH WEST ENGLAND</span>
+                <h2>Featured <em>Properties</em></h2>
+                <p>Explore a selection of our residential homes. Browse multiple views of each property using the image controls.</p>
             </div>
 
-            <div class="property-grid gallery-grid">
-
-                <article class="property-card showcase-card">
-
-                    <div class="property-image-wrap">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
-                            alt="Illustrative example of a renovated contemporary residential home"
-                        >
-
-                        <span class="property-region">
-                            SOUTH EAST ENGLAND
-                        </span>
-
+            <div class="property-grid gallery-grid featured-property-grid">
+                <article class="property-card showcase-card featured-property-card">
+                    <div class="property-image-wrap gallery-slider" data-slider aria-label="The Kennet Victorian Terrace photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Renovated contemporary family home exterior">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Bright modern home interior" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Refurbished residential living space" loading="lazy">
+                        <span class="property-region">SOUTH EAST ENGLAND</span>
                         <span class="property-epc">EPC B</span>
-
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button>
+                        <button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button>
+                        <span class="gallery-counter" aria-live="polite">1 / 3</span>
                     </div>
-
                     <div class="property-info">
-
-                        <p class="property-location">
-                            BURGHFIELD &amp; READING, BERKSHIRE
-                        </p>
-
+                        <p class="property-location">BURGHFIELD &amp; READING, BERKSHIRE</p>
                         <h3>The Kennet Victorian Terrace</h3>
-
-                        <p>
-                            Illustrative example: refurbished three-bedroom family home with a modern kitchen, bright living spaces and an enclosed garden.
-                        </p>
-
-                        <div class="property-facts">
-                            <span>3 Bedrooms</span>
-                            <span>2 Bathrooms</span>
-                            <span>Garden &amp; Parking</span>
-                        </div>
-
-                        <a
-                            class="button button-green property-book"
-                            href="rental-enquiry.html"
-                        >
-                            Book Your House
-                        </a>
-
+                        <p>Illustrative example: refurbished three-bedroom family home with a modern kitchen, bright living spaces and an enclosed garden.</p>
+                        <div class="property-facts"><span>3 Bedrooms</span><span>2 Bathrooms</span><span>Garden &amp; Parking</span></div>
+                        <a class="button button-green property-book" href="rental-enquiry.html">Book Your House</a>
                     </div>
-
                 </article>
 
-                <article class="property-card showcase-card">
-
-                    <div class="property-image-wrap">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
-                            alt="Illustrative example of a renovated semi-detached home"
-                        >
-
-                        <span class="property-region">
-                            SOUTH EAST ENGLAND
-                        </span>
-
+                <article class="property-card showcase-card featured-property-card">
+                    <div class="property-image-wrap gallery-slider" data-slider aria-label="Surrey Hills Semi-Detached photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Modern semi-detached family house">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Contemporary open-plan living room" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Bright residential interior" loading="lazy">
+                        <span class="property-region">SOUTH EAST ENGLAND</span>
                         <span class="property-epc">EPC B</span>
-
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button>
+                        <button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button>
+                        <span class="gallery-counter" aria-live="polite">1 / 3</span>
                     </div>
-
                     <div class="property-info">
-
-                        <p class="property-location">
-                            GUILDFORD, SURREY
-                        </p>
-
+                        <p class="property-location">GUILDFORD, SURREY</p>
                         <h3>Surrey Hills Semi-Detached</h3>
-
-                        <p>
-                            Illustrative example: modernised four-bedroom family residence with efficient heating, open-plan living and contemporary finishes.
-                        </p>
-
-                        <div class="property-facts">
-                            <span>4 Bedrooms</span>
-                            <span>2 Bathrooms</span>
-                            <span>EV Ready</span>
-                        </div>
-
-                        <a
-                            class="button button-green property-book"
-                            href="rental-enquiry.html"
-                        >
-                            Book Your House
-                        </a>
-
+                        <p>Illustrative example: modernised four-bedroom family residence with efficient heating, open-plan living and contemporary finishes.</p>
+                        <div class="property-facts"><span>4 Bedrooms</span><span>2 Bathrooms</span><span>EV Ready</span></div>
+                        <a class="button button-green property-book" href="rental-enquiry.html">Book Your House</a>
                     </div>
-
                 </article>
 
-                <article class="property-card showcase-card">
-
-                    <div class="property-image-wrap">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
-                            alt="Illustrative example of a renovated period residence"
-                        >
-
-                        <span class="property-region">
-                            SOUTH EAST ENGLAND
-                        </span>
-
+                <article class="property-card showcase-card featured-property-card">
+                    <div class="property-image-wrap gallery-slider" data-slider aria-label="Cherwell Period Residence photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Character period residence">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Renovated period home interior" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Contemporary bathroom and living finishes" loading="lazy">
+                        <span class="property-region">SOUTH EAST ENGLAND</span>
                         <span class="property-epc">EPC C+</span>
-
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button>
+                        <button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button>
+                        <span class="gallery-counter" aria-live="polite">1 / 3</span>
                     </div>
-
                     <div class="property-info">
-
-                        <p class="property-location">
-                            OXFORD, OXFORDSHIRE
-                        </p>
-
+                        <p class="property-location">OXFORD, OXFORDSHIRE</p>
                         <h3>Cherwell Period Residence</h3>
-
-                        <p>
-                            Illustrative example: sensitively improved character home with upgraded insulation, quality flooring and contemporary bathrooms.
-                        </p>
-
-                        <div class="property-facts">
-                            <span>3 Bedrooms</span>
-                            <span>2 Bathrooms</span>
-                            <span>Study Room</span>
-                        </div>
-
-                        <a
-                            class="button button-green property-book"
-                            href="rental-enquiry.html"
-                        >
-                            Book Your House
-                        </a>
-
+                        <p>Illustrative example: sensitively improved character home with upgraded insulation, quality flooring and contemporary bathrooms.</p>
+                        <div class="property-facts"><span>3 Bedrooms</span><span>2 Bathrooms</span><span>Study Room</span></div>
+                        <a class="button button-green property-book" href="rental-enquiry.html">Book Your House</a>
                     </div>
-
                 </article>
 
+                <article class="property-card showcase-card featured-property-card">
+                    <div class="property-image-wrap gallery-slider" data-slider aria-label="Modern Family Home photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Modern family home exterior">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Spacious family living area" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Landscaped residential garden" loading="lazy">
+                        <span class="property-region">SOUTH WEST ENGLAND</span>
+                        <span class="property-epc">EPC B</span>
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button>
+                        <button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button>
+                        <span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="property-info">
+                        <p class="property-location">SOUTH WEST ENGLAND</p>
+                        <h3>Modern Family Home</h3>
+                        <p>Illustrative example: thoughtfully updated family accommodation with comfortable shared spaces and a private outdoor area.</p>
+                        <div class="property-facts"><span>4 Bedrooms</span><span>2 Bathrooms</span><span>Private Garden</span></div>
+                        <a class="button button-green property-book" href="rental-enquiry.html">Book Your House</a>
+                    </div>
+                </article>
             </div>
 
-            <p class="sample-disclaimer">
-                The properties shown are illustrative examples for design purposes only, not confirmed available listings. Images and details can be replaced with your actual portfolio information.
-            </p>
-
+            <p class="sample-disclaimer">The properties shown are illustrative examples for design purposes only, not confirmed available listings. Images and details can be replaced with your actual portfolio information.</p>
         </div>
-
     </section>
+
+    <!-- Property Categories -->
+    <section class="section-pad property-categories-section">
+        <div class="container">
+            <div class="properties-intro">
+                <span class="region-label">EXPLORE THE DETAILS</span>
+                <h2>Explore by <em>Category</em></h2>
+                <p>Take a closer look at the spaces that make a house feel like home. Select the arrows to browse each collection.</p>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="category-slider gallery-slider" data-slider aria-label="Full House photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Full view of a modern British home">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Contemporary house exterior" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Renovated residential property" loading="lazy">
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button><button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button><span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="category-card-info"><span>01 / PROPERTY COLLECTION</span><h3>Full House</h3><p>Discover the character, exterior and overall feel of our homes.</p></div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-slider gallery-slider" data-slider aria-label="Kitchen photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Modern fitted kitchen" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85'">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Open plan kitchen and dining space" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Bright contemporary kitchen interior" loading="lazy">
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button><button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button><span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="category-card-info"><span>02 / ROOM COLLECTION</span><h3>Kitchen</h3><p>Browse practical, welcoming kitchens and dining spaces.</p></div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-slider gallery-slider" data-slider aria-label="Living Room photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Warm contemporary living room">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Bright open-plan living space" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Comfortable modern lounge" loading="lazy">
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button><button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button><span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="category-card-info"><span>03 / ROOM COLLECTION</span><h3>Living Room</h3><p>See relaxed living areas designed for everyday comfort.</p></div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-slider gallery-slider" data-slider aria-label="Washroom photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Contemporary bathroom">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Modern bathroom fittings" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Bright washroom interior" loading="lazy">
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button><button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button><span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="category-card-info"><span>04 / ROOM COLLECTION</span><h3>Washroom</h3><p>Explore fresh, functional bathrooms and washrooms.</p></div>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-slider gallery-slider" data-slider aria-label="Backyard photo gallery">
+                        <img class="gallery-slide is-active" src="https://images.unsplash.com/photo-1600047509782-20d39509f26d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Landscaped backyard garden">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Garden seating area" loading="lazy">
+                        <img class="gallery-slide" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Home with outdoor space" loading="lazy">
+                        <button class="gallery-control gallery-prev" type="button" aria-label="Previous photo">&#10094;</button><button class="gallery-control gallery-next" type="button" aria-label="Next photo">&#10095;</button><span class="gallery-counter" aria-live="polite">1 / 3</span>
+                    </div>
+                    <div class="category-card-info"><span>05 / OUTDOOR COLLECTION</span><h3>Backyard</h3><p>Discover private gardens and outdoor spaces to enjoy.</p></div>
+                </article>
+            </div>
+            <p class="sample-disclaimer">Category images are illustrative examples. Replace them with photographs from your own property portfolio.</p>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-slider]').forEach(function (slider) {
+            var slides = Array.from(slider.querySelectorAll('.gallery-slide'));
+            var counter = slider.querySelector('.gallery-counter');
+            var current = 0;
+            if (!slides.length) return;
+            function showSlide(index) {
+                current = (index + slides.length) % slides.length;
+                slides.forEach(function (slide, i) {
+                    slide.classList.toggle('is-active', i === current);
+                    slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+                });
+                if (counter) counter.textContent = (current + 1) + ' / ' + slides.length;
+            }
+            var prev = slider.querySelector('.gallery-prev');
+            var next = slider.querySelector('.gallery-next');
+            if (prev) prev.addEventListener('click', function () { showSlide(current - 1); });
+            if (next) next.addEventListener('click', function () { showSlide(current + 1); });
+            showSlide(0);
+        });
+    });
+    </script>
+
+	
+	<!-- YOUR NEXT STEP Section -->
 
     <section class="section-pad bg-sand">
 
@@ -278,6 +301,8 @@
     </section>
 
 </main>
+
+
 
 
 

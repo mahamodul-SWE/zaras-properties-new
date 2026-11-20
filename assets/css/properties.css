@@ -1986,3 +1986,205 @@ footer .brand-name b {
 
 
 
+
+/* =========================================================
+   Properties page gallery redesign
+   Scoped to the gallery sections only; header, footer and
+   YOUR NEXT STEP section retain their existing styling.
+   ========================================================= */
+.properties-showcase .featured-property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.properties-showcase .featured-property-card {
+    border-radius: 10px;
+}
+
+.properties-showcase .property-image-wrap.gallery-slider {
+    height: 285px;
+}
+
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #e9e2d5;
+}
+
+.gallery-slider .gallery-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.025);
+    transition: opacity .35s ease, transform .55s ease, visibility .35s;
+}
+
+.gallery-slider .gallery-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.gallery-control {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 50%;
+    background: rgba(24,61,50,.78);
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.gallery-control:hover {
+    background: #c6a878;
+    border-color: #c6a878;
+    transform: translateY(-50%) scale(1.07);
+}
+
+.gallery-control:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.gallery-prev { left: 13px; }
+.gallery-next { right: 13px; }
+
+.gallery-counter {
+    position: absolute;
+    z-index: 4;
+    right: 13px;
+    bottom: 13px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 20px;
+    background: rgba(18,47,38,.78);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    font-variant-numeric: tabular-nums;
+}
+
+.properties-showcase .showcase-card .property-info > p:not(.property-location) {
+    min-height: 58px;
+}
+
+.property-categories-section {
+    background: #f0ece3;
+}
+
+.property-categories-section .properties-intro {
+    margin-bottom: 42px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dce2dc;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(24,61,50,.07);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(24,61,50,.12);
+}
+
+.category-slider {
+    height: 235px;
+}
+
+.category-card-info {
+    padding: 20px 22px 23px;
+}
+
+.category-card-info > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #879889;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.category-card-info h3 {
+    margin: 0 0 7px;
+    color: #183d32;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.category-card-info p {
+    margin: 0;
+    color: #68716b;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.property-categories-section .sample-disclaimer {
+    margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+    .properties-showcase .featured-property-grid {
+        gap: 22px;
+    }
+    .properties-showcase .property-image-wrap.gallery-slider {
+        height: 245px;
+    }
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .properties-showcase .featured-property-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    .properties-showcase .property-image-wrap.gallery-slider {
+        height: 235px;
+    }
+    .category-slider {
+        height: 230px;
+    }
+    .gallery-control {
+        width: 36px;
+        height: 36px;
+    }
+    .properties-showcase .showcase-card .property-info > p:not(.property-location) {
+        min-height: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-slider .gallery-slide,
+    .gallery-control,
+    .category-card {
+        transition: none;
+    }
+}
