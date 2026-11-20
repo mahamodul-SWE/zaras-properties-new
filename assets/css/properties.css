@@ -2188,3 +2188,135 @@ footer .brand-name b {
         transition: none;
     }
 }
+
+
+
+
+
+/* Global horizontal overflow fix (sticky header intact rakhbe) */
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.empty-feature,
+.feature-image {
+    overflow: hidden;
+}
+
+@media (max-width: 620px) {
+    /* Grid columns jeno screen-er baire na jay */
+    .split-intro,
+    .feature-split,
+    .property-grid,
+    .three-grid,
+    .values-grid,
+    .empty-feature,
+    .gallery-empty,
+    .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Header mobile fit fix */
+    .site-header .container {
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    .nav-wrap {
+        gap: 8px;
+    }
+
+    .brand {
+        gap: 7px;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .navbar-logo {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .brand-name {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .brand-name small {
+        display: none;
+    }
+
+    .menu-toggle {
+        padding: 6px;
+        flex-shrink: 0;
+        order: 3; /* Hamburger icon ekdom dane thakbe */
+    }
+
+    .call-button {
+        margin-left: auto;
+        padding: 8px 10px;
+        font-size: 10px;
+        gap: 5px;
+        flex-shrink: 0;
+        order: 2;
+    }
+
+    /* Hero text cut-off & left-edge fix */
+    .hero-content {
+        width: min(100% - 32px, 1180px);
+        padding-top: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9.5vw, 46px);
+        line-height: 1.12;
+        overflow-wrap: break-word;
+    }
+
+    .hero-copy {
+        font-size: 15px;
+    }
+
+    .about-section-title {
+        font-size: clamp(26px, 7.5vw, 34px);
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .feature-image:before {
+        left: 0;
+        bottom: 0;
+    }
+
+    /* Footer brand nowrap overflow fix */
+    .footer-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    footer .brand-name {
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+/* Khub choto screen (360px er niche) er jonne extra safety */
+@media (max-width: 360px) {
+    .brand-name {
+        font-size: 10px;
+        letter-spacing: 0.03em;
+    }
+
+    .call-button {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+}
