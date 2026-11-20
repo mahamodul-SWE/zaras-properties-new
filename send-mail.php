@@ -1,5 +1,14 @@
-
 <?php
+ob_start();
+
+// Load PHPMailer
+require_once __DIR__ . '/phpmailer/Exception.php';
+require_once __DIR__ . '/phpmailer/PHPMailer.php';
+require_once __DIR__ . '/phpmailer/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 
 // Clean and limit user input
 function clean(string $value, int $max = 4000): string {
@@ -11,6 +20,7 @@ function clean(string $value, int $max = 4000): string {
 
     return substr($value, 0, $max);
 }
+
 
 // Display error page
 function fail(string $message, int $status = 400): void {
@@ -41,16 +51,19 @@ function fail(string $message, int $status = 400): void {
     exit;
 }
 
+
 // Only accept POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: contact.html");
     exit;
 }
 
+
 // Honeypot spam protection
 if (!empty($_POST["website"] ?? "")) {
     fail("Your submission could not be accepted.");
 }
+
 
 // Collect form data
 $name = clean((string)($_POST["name"] ?? ""), 100);
@@ -64,12 +77,14 @@ $message = clean((string)($_POST["message"] ?? ""), 4000);
 
 $consent = (string)($_POST["consent"] ?? "");
 
+
 // Validate form type
 $formTypes = ["rental", "seller", "general"];
 
 if (!in_array($type, $formTypes, true)) {
     fail("The form type was not recognised.");
 }
+
 
 // Validate common required fields
 if (
@@ -82,6 +97,7 @@ if (
     fail("Please complete all required fields and check your email address.");
 }
 
+
 // Validate Other subject
 if ($subjectChoice === "Other" && $otherSubject === "") {
     fail("Please write your subject.");
@@ -90,6 +106,7 @@ if ($subjectChoice === "Other" && $otherSubject === "") {
 $subject = ($subjectChoice === "Other")
     ? $otherSubject
     : $subjectChoice;
+
 
 // Validate telephone
 $phoneRequired = in_array($type, ["rental", "seller"], true);
@@ -102,6 +119,7 @@ if ($phone !== "" && !preg_match('/^[0-9+\s().-]{7,40}$/', $phone)) {
     fail("Please enter a valid telephone number.");
 }
 
+
 // Collect seller-specific information
 $propertyAddress = clean(
     (string)($_POST["property_address"] ?? ""),
@@ -112,8 +130,16 @@ if ($type === "seller" && $propertyAddress === "") {
     fail("Please enter the property address or postcode.");
 }
 
-// Testing recipient
-$recipient = "midul.others@gmail.com";
+
+// Email configuration
+$senderEmail = "midul.others@gmail.com";
+$recipientEmail = "midul.others@gmail.com";
+
+// IMPORTANT:
+// Add a NEW Gmail App Password here.
+// Do not reuse the previously shared password.
+$smtpPassword = "vvhi vtjn kqfq relr";
+
 
 // Email subject prefixes
 $subjectPrefixes = [
@@ -124,6 +150,7 @@ $subjectPrefixes = [
 
 $mailSubject = $subjectPrefixes[$type] . ": " . $subject;
 
+
 // Build enquiry details
 $details = [
     "Enquiry type" => ucfirst($type),
@@ -132,6 +159,7 @@ $details = [
     "Telephone" => $phone ?: "Not provided",
     "Subject" => $subject
 ];
+
 
 // Optional fields
 $optionalFields = [
@@ -150,6 +178,7 @@ foreach ($optionalFields as $key => $label) {
     }
 }
 
+
 // Build email body
 $body = "A new enquiry has been submitted through the Zaras Properties website.\n\n";
 
@@ -160,29 +189,43 @@ foreach ($details as $label => $value) {
 $body .= "\nMessage:\n" . $message;
 $body .= "\n\nSent from the Zaras Properties website.";
 
-// Email headers
-$headers = [
-    "From: Zaras Properties Website <website@zarasproperties.co.uk>",
-    "Reply-To: " . $email,
-    "Content-Type: text/plain; charset=UTF-8",
-    "X-Mailer: PHP/" . phpversion()
-];
 
-// Encode email subject
-$encodedSubject = "=?UTF-8?B?" . base64_encode($mailSubject) . "?=";
+// Send email using PHPMailer
+$mail = new PHPMailer(true);
 
-// Send email
-$sent = @mail(
-    $recipient,
-    $encodedSubject,
-    $body,
-    implode("\r\n", $headers)
-);
+try {
 
-// Handle sending failure
-if (!$sent) {
+    $mail->isSMTP();
+
+    $mail->Host       = "smtp.gmail.com";
+    $mail->SMTPAuth   = true;
+	$mail->Username   = $senderEmail;
+	$mail->Password   = $smtpPassword;
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPDebug = 0;
+	// $mail->Debugoutput = 'error_log';
+
+    $mail->setFrom($senderEmail, "Zaras Properties");
+    $mail->addAddress($recipientEmail);
+
+    // Customer email will be used when replying
+    $mail->addReplyTo($email, $name);
+
+    $mail->isHTML(false);
+
+    $mail->Subject = $mailSubject;
+    $mail->Body    = $body;
+
+    $mail->send();
+
+} catch (Exception $e) {
+
     error_log(
-        "Zaras Properties email sending failed. Form type: " . $type
+        "Zaras Properties email sending failed. Form type: " .
+        $type . ". Error: " . $mail->ErrorInfo
     );
 
     fail(
@@ -191,6 +234,14 @@ if (!$sent) {
     );
 }
 
+
 // Successful submission
-header("Location: thank-you.html");
+error_log("ZARAS REDIRECT TEST: Email sent successfully.");
+
+header("Location: https://zarasproperties.co.uk/thank-you.html", true, 303);
+
+if (headers_sent($file, $line)) {
+    error_log("ZARAS REDIRECT FAILED: Output started in $file at line $line");
+}
+
 exit;

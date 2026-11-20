@@ -1,0 +1,273 @@
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 5b1f17b1804b1-4bb853ca452sm123941785e9.15 - gsmtp
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: STARTTLS
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: AUTH LOGIN
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4bb853ca452sm123941785e9.15 - gsmtp
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SMTP ERROR: Password command failed: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4bb853ca452sm123941785e9.15 - gsmtp
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SMTP Error: Could not authenticate.
+[20-Nov-2026 15:31:46 Europe/Berlin] CLIENT -> SERVER: QUIT
+
+[20-Nov-2026 15:31:46 Europe/Berlin] SERVER -> CLIENT: 
+[20-Nov-2026 15:31:46 Europe/Berlin] SMTP ERROR: QUIT command failed: 
+[20-Nov-2026 15:31:46 Europe/Berlin] SMTP Error: Could not authenticate.
+[20-Nov-2026 15:31:46 Europe/Berlin] Zaras Properties email sending failed. Form type: general. Error: SMTP Error: Could not authenticate.SMTP server error: QUIT command failed
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: STARTTLS
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: AUTH LOGIN
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: MAIL FROM:<midul.others@gmail.com>
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 250 2.1.0 OK 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: RCPT TO:<midul.others@gmail.com>
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 250 2.1.5 OK 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: DATA
+
+[20-Nov-2026 15:49:02 Europe/Berlin] SERVER -> CLIENT: 354 Go ahead 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Date: Fri, 20 Nov 2026 15:49:02 +0100
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: To: midul.others@gmail.com
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: From: Zaras Properties <midul.others@gmail.com>
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Reply-To: test name <tesmail@gmail.com>
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Subject: Website contact enquiry: Rental enquiry
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Message-ID: <3CPoykPfMWYNTLMgBYTAChm4e9VgOefFDLBNIKPPTc@zarasproperties.co.uk>
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: MIME-Version: 1.0
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: A new enquiry has been submitted through the Zaras Properties website.
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Enquiry type: General
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Name: test name
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Email: tesmail@gmail.com
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Telephone: Not provided
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Subject: Rental enquiry
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Message:
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: iuiuhbius oshnoiusc snbciuasbcn jusncioasncbioashbciasbc oiasncoasncoiasnc asocnoasicn
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: Sent from the Zaras Properties website.
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:49:02 Europe/Berlin] CLIENT -> SERVER: .
+
+[20-Nov-2026 15:49:03 Europe/Berlin] SERVER -> CLIENT: 250 2.0.0 OK  1795186143 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:49:03 Europe/Berlin] CLIENT -> SERVER: QUIT
+
+[20-Nov-2026 15:49:03 Europe/Berlin] SERVER -> CLIENT: 221 2.0.0 closing connection 5b1f17b1804b1-4bb853c9170sm133637435e9.14 - gsmtp
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: STARTTLS
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 220 2.0.0 Ready to start TLS
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: EHLO zarasproperties.co.uk
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 250-smtp.gmail.com at your service, [82.165.89.243]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250-SMTPUTF8
+250 LIMITS MAILMAX=1000 RCPTMAX=100
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: AUTH LOGIN
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: [credentials hidden]
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 235 2.7.0 Accepted
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: MAIL FROM:<midul.others@gmail.com>
+
+[20-Nov-2026 15:54:34 Europe/Berlin] SERVER -> CLIENT: 250 2.1.0 OK 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 15:54:34 Europe/Berlin] CLIENT -> SERVER: RCPT TO:<midul.others@gmail.com>
+
+[20-Nov-2026 15:54:35 Europe/Berlin] SERVER -> CLIENT: 250 2.1.5 OK 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: DATA
+
+[20-Nov-2026 15:54:35 Europe/Berlin] SERVER -> CLIENT: 354 Go ahead 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Date: Fri, 20 Nov 2026 15:54:34 +0100
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: To: midul.others@gmail.com
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: From: Zaras Properties <midul.others@gmail.com>
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Reply-To: test name <test@gmail.com>
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Subject: Rental enquiry: I want rent Properties
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Message-ID: <WB1lRCQTEKUWuZLcZBdJUoTCdeRqjlWSVAsHSckSBY@zarasproperties.co.uk>
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: MIME-Version: 1.0
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: A new enquiry has been submitted through the Zaras Properties website.
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Enquiry type: Rental
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Name: test name
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Email: test@gmail.com
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Telephone: 0975643323
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Subject: I want rent Properties
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Preferred location: hggtr
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Property type: House
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Message:
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: liahsoascouha ohciauschio oiasoc
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: Sent from the Zaras Properties website.
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: 
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: .
+
+[20-Nov-2026 15:54:35 Europe/Berlin] SERVER -> CLIENT: 250 2.0.0 OK  1795186475 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 15:54:35 Europe/Berlin] CLIENT -> SERVER: QUIT
+
+[20-Nov-2026 15:54:35 Europe/Berlin] SERVER -> CLIENT: 221 2.0.0 closing connection 5b1f17b1804b1-4bb853a9687sm137061335e9.10 - gsmtp
+
+[20-Nov-2026 18:33:57 Europe/Berlin] ZARAS REDIRECT TEST: Email sent successfully.
+[20-Nov-2026 18:33:57 Europe/Berlin] ZARAS REDIRECT FAILED: Output started in /homepages/35/d1007572076/htdocs/send-mail.php at line 1
+[20-Nov-2026 18:41:27 Europe/Berlin] ZARAS REDIRECT TEST: Email sent successfully.
+[20-Nov-2026 18:43:21 Europe/Berlin] ZARAS REDIRECT TEST: Email sent successfully.
+[20-Nov-2026 18:44:09 Europe/Berlin] ZARAS REDIRECT TEST: Email sent successfully.
+[20-Nov-2026 19:03:31 Europe/Berlin] ZARAS REDIRECT TEST: Email sent successfully.
