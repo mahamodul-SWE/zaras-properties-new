@@ -106,35 +106,76 @@
 <!--Contact form section-->
 
 
+
 <form class="contact-form" action="send-mail.php" method="post">
 
-	<input type="hidden" name="form_type" value="general">
-	<p class="eyebrow">SEND AN ENQUIRY</p>
-	<h2>How can we <em>help?</em></h2>
-	
-	<div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="150"></label></div>
-	
-	<div class="form-row">
-	
-	<label>Telephone (optional)<input name="phone" autocomplete="tel" maxlength="40"></label>
-	
-	<label>Subject<select name="subject" id="contact-subject" required><option value="">Choose a subject</option><option>Rental enquiry</option><option>Property sale / acquisition</option><option>Corporate social responsibility</option><option>General enquiry</option><option value="Other">Others</option></select>
-	
-	</label>
-	
-	</div>
-	
-	<label class="other-subject" hidden>Write your subject<input name="other_subject" maxlength="120"></label>
-	
-	<label>Your message<textarea name="message" rows="6" required maxlength="4000"></textarea></label>
-	
-	<label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Zaras Properties may contact me about this enquiry.</span></label>
-	
-	<div class="form-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
-	
-	<button class="button button-green" type="submit">Send Enquiry <span>↗</span></button>
-	
-	<p class="form-privacy">Your message will be sent directly to info@zarasproperties.com. No website database is used.</p>
+    <input type="hidden" name="form_type" value="general">
+
+    <p class="eyebrow">SEND AN ENQUIRY</p>
+    <h2>How can we <em>help?</em></h2>
+
+    <div class="form-row">
+        <label>
+            Your name
+            <input name="name" autocomplete="name" required maxlength="100">
+        </label>
+
+        <label>
+            Email address
+            <input type="email" name="email" autocomplete="email" required maxlength="150">
+        </label>
+    </div>
+
+    <div class="form-row">
+
+        <label>
+            Telephone (optional)
+            <input name="phone" autocomplete="tel" maxlength="40">
+        </label>
+
+        <label>
+            Subject
+            <select name="subject" id="contact-subject" required>
+                <option value="">Choose a subject</option>
+                <option>Rental enquiry</option>
+                <option>Property sale / acquisition</option>
+                <option>Corporate social responsibility</option>
+                <option>General enquiry</option>
+                <option value="Other">Others</option>
+            </select>
+        </label>
+
+    </div>
+
+    <label class="other-subject" hidden>
+        Write your subject
+        <input name="other_subject" maxlength="120">
+    </label>
+
+    <label>
+        Your message
+        <textarea name="message" rows="6" required maxlength="4000"></textarea>
+    </label>
+
+    <label class="consent">
+        <input type="checkbox" name="consent" value="yes" required>
+        <span>I agree that Zaras Properties may contact me about this enquiry.</span>
+    </label>
+
+    <div class="form-trap" aria-hidden="true">
+        <label>
+            Leave this field empty
+            <input name="website" tabindex="-1" autocomplete="off">
+        </label>
+    </div>
+
+    <button class="button button-green" type="submit">
+        Send Enquiry <span>↗</span>
+    </button>
+
+    <p class="form-privacy">
+        During testing, your message will be sent to our test inbox. No website database is used.
+    </p>
 
 </form>
 

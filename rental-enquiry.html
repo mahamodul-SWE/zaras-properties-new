@@ -86,36 +86,82 @@
 
 </div>
 
+
+
+
 <form class="contact-form" action="send-mail.php" method="post">
 
 <input type="hidden" name="form_type" value="rental">
 
-<div class="form-row"><label>Full name<input name="name" autocomplete="name" required maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="150"></label>
+<div class="form-row">
+  <label>Full name
+    <input name="name" autocomplete="name" required maxlength="100">
+  </label>
+  <label>Email address
+    <input type="email" name="email" autocomplete="email" required maxlength="150">
+  </label>
 </div>
 
-<div class="form-row"><label>Telephone number<input name="phone" autocomplete="tel" required maxlength="40"></label><label>Enquiry subject<select name="subject" id="rental-subject" required><option value="">Select a subject</option><option>I want rent Properties</option><option>I want rent House</option><option>I want book house</option><option>Just need some rental inquiry</option><option value="Other">Others</option></select></label>
-
+<div class="form-row">
+  <label>Telephone number
+    <input name="phone" autocomplete="tel" required maxlength="40">
+  </label>
+  <label>Enquiry subject
+    <select name="subject" id="rental-subject" required>
+      <option value="">Select a subject</option>
+      <option>I want rent Properties</option>
+      <option>I want rent House</option>
+      <option>I want book house</option>
+      <option>Just need some rental inquiry</option>
+      <option value="Other">Others</option>
+    </select>
+  </label>
 </div>
 
-<label class="other-subject" hidden>Write your subject<input name="other_subject" maxlength="120"></label>
-
-<div class="form-row"><label>Preferred location<input name="location" placeholder="e.g. Reading, Berkshire" maxlength="120"></label><label>Property type<select name="property_type"><option value="">Select property type</option><option>Flat / Apartment</option><option>House</option><option>Either</option></select></label>
-</div>
-
-<label>Tell us a little more<textarea name="message" rows="5" required maxlength="4000" placeholder="Your preferred move-in date, number of bedrooms and any other requirements..."></textarea>
+<label class="other-subject" hidden>
+  Write your subject
+  <input name="other_subject" maxlength="120">
 </label>
 
-<label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Zaras Properties may contact me about this enquiry.</span>
-</label>
-
-<div class="form-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+<div class="form-row">
+  <label>Preferred location
+    <input name="location" placeholder="e.g. Reading, Berkshire" maxlength="120">
+  </label>
+  <label>Property type
+    <select name="property_type">
+      <option value="">Select property type</option>
+      <option>Flat / Apartment</option>
+      <option>House</option>
+      <option>Either</option>
+    </select>
+  </label>
 </div>
 
-<button class="button button-green" type="submit">Submit Rental Enquiry <span>↗</span>
+<label>Tell us a little more
+  <textarea name="message" rows="5" required maxlength="4000" placeholder="Your preferred move-in date, number of bedrooms and any other requirements..."></textarea>
+</label>
+
+<label class="consent">
+  <input type="checkbox" name="consent" value="yes" required>
+  <span>I agree that Zaras Properties may contact me about this enquiry.</span>
+</label>
+
+<div class="form-trap" aria-hidden="true">
+  <label>Leave this field empty
+    <input name="website" tabindex="-1" autocomplete="off">
+  </label>
+</div>
+
+<button class="button button-green" type="submit">
+  Submit Rental Enquiry <span>↗</span>
 </button>
+
 <p class="form-privacy">Your details are emailed to our team and are not saved to a website database.</p>
 
 </form>
+
+
+
 
 </div>
 

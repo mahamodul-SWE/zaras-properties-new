@@ -91,30 +91,114 @@
 </div>
 
 
+<!-- Sell Property Form -->
 <form class="contact-form" action="send-mail.php" method="post">
 
-<input type="hidden" name="form_type" value="seller">
+    <input type="hidden" name="form_type" value="seller">
 
-<div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="150"></label></div>
+    <div class="form-row">
+        <label>
+            Your name
+            <input name="name" autocomplete="name" required maxlength="100">
+        </label>
 
-<div class="form-row"><label>Telephone number<input name="phone" autocomplete="tel" required maxlength="40"></label><label>Enquiry subject<select name="subject" id="seller-subject" required><option value="">Select a subject</option><option>For selling properties</option><option>For selling house</option><option value="Other">Others</option></select></label></div>
+        <label>
+            Email address
+            <input type="email" name="email" autocomplete="email" required maxlength="150">
+        </label>
+    </div>
 
-<label class="other-subject" hidden>Write your subject<input name="other_subject" maxlength="120"></label>
+    <div class="form-row">
+        <label>
+            Telephone number
+            <input name="phone" autocomplete="tel" required maxlength="40">
+        </label>
 
-<div class="form-row"><label>Property address / postcode<input name="property_address" required maxlength="250"></label><label>Your relationship to the property<select name="seller_type"><option>Homeowner</option><option>Landlord</option><option>Estate agent</option><option>Other</option></select></label></div>
+        <label>
+            Enquiry subject
+            <select name="subject" id="seller-subject" required>
+                <option value="">Select a subject</option>
+                <option>For selling properties</option>
+                <option>For selling house</option>
+                <option value="Other">Others</option>
+            </select>
+        </label>
+    </div>
 
-<div class="form-row"><label>Property type<select name="property_type"><option>House</option><option>Flat / Apartment</option><option>Other residential property</option></select></label><label>Indicative asking price (optional)<input name="asking_price" placeholder="e.g. £250,000" maxlength="50"></label></div>
+    <label class="other-subject" hidden>
+        Write your subject
+        <input name="other_subject" maxlength="120">
+    </label>
 
-<label>Property details<textarea name="message" rows="5" required maxlength="4000" placeholder="Tell us about the property, its condition and your preferred timescale..."></textarea></label>
+    <div class="form-row">
+        <label>
+            Property address / postcode
+            <input name="property_address" required maxlength="250">
+        </label>
 
-<label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Zaras Properties may contact me about this property enquiry.</span></label>
+        <label>
+            Your relationship to the property
+            <select name="seller_type">
+                <option>Homeowner</option>
+                <option>Landlord</option>
+                <option>Estate agent</option>
+                <option>Other</option>
+            </select>
+        </label>
+    </div>
 
-<div class="form-trap" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="form-row">
+        <label>
+            Property type
+            <select name="property_type">
+                <option>House</option>
+                <option>Flat / Apartment</option>
+                <option>Other residential property</option>
+            </select>
+        </label>
 
-<button class="button button-green" type="submit">Send Property Details <span>↗</span></button><p class="form-privacy">Your enquiry is sent directly by email. No website database is used.</p>
+        <label>
+            Indicative asking price (optional)
+            <input name="asking_price" placeholder="e.g. £250,000" maxlength="50">
+        </label>
+    </div>
 
+    <label>
+        Property details
+        <textarea
+            name="message"
+            rows="5"
+            required
+            maxlength="4000"
+            placeholder="Tell us about the property, its condition and your preferred timescale..."
+        ></textarea>
+    </label>
+
+    <label class="consent">
+        <input type="checkbox" name="consent" value="yes" required>
+        <span>
+            I agree that Zaras Properties may contact me about this property enquiry.
+        </span>
+    </label>
+
+    <div class="form-trap" aria-hidden="true">
+        <label>
+            Leave this field empty
+            <input name="website" tabindex="-1" autocomplete="off">
+        </label>
+    </div>
+
+    <button class="button button-green" type="submit">
+        Send Property Details <span>↗</span>
+    </button>
+
+    <p class="form-privacy">
+        During testing, your property enquiry will be sent to our test inbox.
+        No website database is used.
+    </p>
 
 </form>
+
 
 </div>
 
